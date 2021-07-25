@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/Link";
+import { Bars } from "@styled-icons/fa-solid";
 
-function Navbar() {
+function Navbar({ toggle }) {
   return (
     <Container>
       <Wrapper>
@@ -18,6 +19,9 @@ function Navbar() {
             </a>
           </Link>
         </Logo>
+        <Sidebar onClick={toggle}>
+          <Bars size="25" title="Sidebar" />
+        </Sidebar>
         <Menu>
           <Link href="">
             <a>
@@ -57,6 +61,10 @@ const Container = styled.div`
   padding: 0 10px;
   z-index: 99;
   color: #fff;
+
+  @media (max-width: 990px) {
+    height: 55px;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -67,11 +75,18 @@ const Wrapper = styled.div`
   z-index: 1;
   width: 100%;
   padding: 0 24px;
-  max-width: 1200px;
+
+  @media (min-width: 1200px) {
+    padding: 100px;
+  }
 `;
 
 const Logo = styled.div`
   padding: 0;
+
+  @media (max-width: 990px) {
+    width: 150px;
+  }
 `;
 
 const Menu = styled.div`
@@ -84,7 +99,7 @@ const Menu = styled.div`
   padding: 0px;
   position: relative;
   margin-right: 0;
-  margin-left: 40%;
+  margin-left: 80px;
   font-weight: 700;
 
   @media (max-width: 990px) {
@@ -110,4 +125,20 @@ const P = styled.p`
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+`;
+
+const Sidebar = styled.div`
+  display: none;
+
+  @media (max-width: 990px) {
+    display: block;
+    position: absolute;
+    align-items: center;
+    right: 3rem;
+    margin: 20px;
+    /* transform: translate(-10%); */
+    /* font-size: 1rem; */
+    cursor: pointer;
+    color: #fff;
+  }
 `;
