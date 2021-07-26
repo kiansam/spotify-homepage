@@ -75,7 +75,6 @@ const Container = styled.aside`
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
   left: ${({ isOpen }) => (isOpen ? "40%" : "100%")};
 
-
   @media (min-width: 990px) {
     display: none;
   }
@@ -84,8 +83,8 @@ const Container = styled.aside`
 const Wrapper = styled.div`
   color: #fff;
   display: block;
-  padding-left: 10px;
-  margin-bottom: 100px;
+  padding-left: 1px;
+  margin-bottom: 10px;
 `;
 
 const Icon = styled.div`
@@ -123,15 +122,15 @@ const P = styled.p`
 
 const NavItem = styled.p`
   padding-top: 10px;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   letter-spacing: 0.1rem;
   font-weight: 700;
-  transition: ease-in 0.15s;
+  transition: all ease-in-out 0.1s;
   cursor: pointer;
   line-height: 2.5rem;
 
   &.small {
-    font-size: 2.2rem;
+    font-size: 1.9rem;
     font-weight: 500;
     letter-spacing: 0.1rem;
     color: #e0e0e0;
@@ -143,7 +142,7 @@ const NavItem = styled.p`
 `;
 
 const Logo = styled.div`
-  padding-top: 60px;
+  padding-top: 90px;
   /* padding-left: 10px; */
 
   /* @media (max-width: 990px) {

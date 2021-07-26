@@ -89,7 +89,7 @@ const Logo = styled.div`
   }
 `;
 
-const Menu = styled.div`
+const Menu = styled.ul`
   align-items: center;
   display: flex;
   /* flex-flow: row nowrap; */
@@ -101,13 +101,19 @@ const Menu = styled.div`
   margin-right: 0;
   margin-left: 80px;
   font-weight: 700;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  list-style: none;
 
   @media (max-width: 990px) {
     display: none;
   }
 `;
 
-const NavItem = styled.p`
+const NavItem = styled.li`
   padding: 16px;
   transition: ease-in 0.1s;
   cursor: pointer;
@@ -129,12 +135,15 @@ const P = styled.p`
 
 const Sidebar = styled.div`
   display: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
 
-  @media (max-width: 990px) {
+  @media (max-width: 992px) {
     display: block;
-    position: absolute;
+    position: relative;
     align-items: center;
-    right: 2rem;
+    right: 0.5rem;
     margin: 20px;
     /* transform: translate(-10%); */
     /* font-size: 1rem; */
