@@ -23,7 +23,7 @@ function Navbar({ toggle }) {
           <Bars size="25" title="Sidebar" />
         </Sidebar>
         <Menu>
-          <Link href="">
+          <Link href="https://www.spotify.com/us/premium/">
             <a>
               <NavItem>Premium</NavItem>
             </a>
@@ -85,7 +85,7 @@ const Logo = styled.div`
   padding: 0;
 
   @media (max-width: 990px) {
-    width: 150px;
+    width: 116px;
   }
 `;
 
@@ -134,11 +134,11 @@ const Sidebar = styled.div`
     display: block;
     position: absolute;
     align-items: center;
-    right: 3rem;
+    right: 2rem;
     margin: 20px;
     /* transform: translate(-10%); */
     /* font-size: 1rem; */
-    cursor: pointer;
+    cursor: default;
     color: #fff;
   }
 `;

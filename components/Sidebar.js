@@ -1,16 +1,22 @@
 import styled from "styled-components";
 import Link from "next/link";
 import { Close } from "@styled-icons/evaicons-solid";
+import Image from "next/image";
 
 function Sidebar({ isOpen, toggle }) {
   return (
     <Container isOpen={isOpen} onClick={toggle}>
-      <Icon onClick={toggle}>
-        <Close size="48" title="Close" />
-      </Icon>
       <Wrapper>
+        <Icon onClick={toggle}>
+          <Close size="48" title="Close" />
+        </Icon>
+
         <Menu>
-          <Link href="/" to="about" onClick={toggle}>
+          <Link
+            href="https://www.spotify.com/us/premium/"
+            to="about"
+            onClick={toggle}
+          >
             <a>
               <NavItem>Premium</NavItem>
             </a>
@@ -27,11 +33,27 @@ function Sidebar({ isOpen, toggle }) {
           </Link>
           <P>_</P>
           <Link href="/" to="footer" onClick={toggle}>
-            Sign up
+            <a>
+              <NavItem className="small"> Sign up</NavItem>
+            </a>
           </Link>
           <Link href="/" to="footer" onClick={toggle}>
-            Log in
+            <a>
+              <NavItem className="small"> Log in </NavItem>
+            </a>
           </Link>
+          <Logo>
+            <Link href="/">
+              <a>
+                <Image
+                  src="/images/Spotify-logo.svg"
+                  height={100}
+                  width={180}
+                  alt="logo"
+                />
+              </a>
+            </Link>
+          </Logo>
         </Menu>
       </Wrapper>
     </Container>
@@ -46,16 +68,24 @@ const Container = styled.aside`
   height: 100%;
   width: 60%;
   background: #000;
-  display: grid;
+  display: block;
   top: 0;
   right: 0;
   transition: 0.2s ease-in-out;
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
   left: ${({ isOpen }) => (isOpen ? "40%" : "100%")};
 
+
   @media (min-width: 990px) {
     display: none;
   }
+`;
+
+const Wrapper = styled.div`
+  color: #fff;
+  display: block;
+  padding-left: 10px;
+  margin-bottom: 100px;
 `;
 
 const Icon = styled.div`
@@ -64,48 +94,59 @@ const Icon = styled.div`
   right: 3rem;
   background: transparent;
   font-size: 2rem;
-  cursor: pointer;
+  cursor: default;
   outline: none;
   color: #fff;
 `;
 
-const Wrapper = styled.div`
-  color: #fff;
-`;
-
 const Menu = styled.ul`
-  display: grid;
+  display: block;
   font-size: 1rem;
-  /* grid-template-columns: 1fr;
-  grid-template-rows: repeat(7, 100px); */
   text-align: left;
   justify-content: left;
   margin-left: auto;
   margin-right: auto;
-
-  /* @media (max-width: 480px) {
-    grid-template-rows: repeat(6, 60px);
-  } */
 `;
 
 const P = styled.p`
-  padding-bottom: 0px;
+  font-size: 3.3rem;
+  /* padding-bottom: 10px; */
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  font-weight: 200;
+  line-height: 3rem;
 `;
 
 const NavItem = styled.p`
-  font-size: 2.6rem;
+  padding-top: 10px;
+  font-size: 2.5rem;
   letter-spacing: 0.1rem;
   font-weight: 700;
-  transition: ease-in 0.1s;
+  transition: ease-in 0.15s;
   cursor: pointer;
+  line-height: 2.5rem;
+
+  &.small {
+    font-size: 2.2rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    color: #e0e0e0;
+  }
 
   &:hover {
     color: #1bd760;
   }
+`;
+
+const Logo = styled.div`
+  padding-top: 60px;
+  /* padding-left: 10px; */
+
+  /* @media (max-width: 990px) {
+    width: 300px;
+  } */
 `;
