@@ -146,6 +146,9 @@ const H1 = styled.h1`
     font-weight: 800;
     line-height: 6rem;
   }
+  @media (max-width: 630px) {
+    color: #fff;
+  }
 `;
 
 const P = styled.p`

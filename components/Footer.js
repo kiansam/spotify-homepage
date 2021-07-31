@@ -6,7 +6,7 @@ function Footer() {
   return (
     <Container>
       <Nav>
-        <Col>
+        <Spotify>
           <Logo>
             <Link href="/">
               <a>
@@ -19,8 +19,79 @@ function Footer() {
               </a>
             </Link>
           </Logo>
-        </Col>
-        <Links></Links>
+        </Spotify>
+        <Columns>
+          <Col>
+            <Co>Company</Co>
+            <Links>
+              <Link href="/">
+                <a>About</a>
+              </Link>
+            </Links>
+            <Links>
+              <Link href="/">
+                <a>Jobs</a>
+              </Link>
+            </Links>
+            <Links>
+              <Link href="/">
+                <a>For the Record</a>
+              </Link>
+            </Links>
+          </Col>
+
+          {/* 2 */}
+          <Col>
+            <Co>Communities</Co>
+            <Links>
+              <Link href="/">
+                <a>For Artists</a>
+              </Link>
+            </Links>
+            <Links>
+              <Link href="/">
+                <a>Developers</a>
+              </Link>
+            </Links>
+            <Links>
+              <Link href="/">
+                <a>Advertising</a>
+              </Link>
+            </Links>
+            <Links>
+              <Link href="/">
+                <a>Investors</a>
+              </Link>
+            </Links>
+            <Links>
+              <Link href="/">
+                <a>Vendors</a>
+              </Link>
+            </Links>
+          </Col>
+
+          {/* 3 */}
+          <Col>
+            <Co>Useful links</Co>
+            <Links>
+              <Link href="/">
+                <a>Support</a>
+              </Link>
+            </Links>
+            <Links>
+              <Link href="/">
+                <a>Web Player</a>
+              </Link>
+            </Links>
+            <Links>
+              <Link href="/">
+                <a>Free Mobile App</a>
+              </Link>
+            </Links>
+          </Col>
+        </Columns>
+
+        {/* ! */}
       </Nav>
     </Container>
   );
@@ -35,6 +106,7 @@ const Container = styled.div`
   font-family: Circular, spotify-circular, Helvetica, Arial, sans-serif;
   font-weight: 400;
   display: block;
+  color: #fff;
 
   @media (min-width: 992px) {
     padding: 80px 0 50px;
@@ -68,7 +140,7 @@ const Nav = styled.nav`
   }
 `;
 
-const Col = styled.div`
+const Spotify = styled.div`
   padding: 0 15px;
   display: block;
   box-sizing: border-box;
@@ -104,11 +176,12 @@ const Logo = styled.div`
   }
 `;
 
-const Links = styled.div`
+const Columns = styled.div`
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
+
   @media (min-width: 768px) {
     -webkit-flex-direction: row;
     flex-direction: row;
@@ -119,5 +192,51 @@ const Links = styled.div`
   }
   @media (min-width: 992px) {
     width: 50%;
+  }
+`;
+
+const Col = styled.dl`
+  padding: 0 15px;
+  margin: 0;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+
+  @media (min-width: 768px) {
+    -webkit-flex: 1 0;
+    flex: 1 0;
+  }
+`;
+
+const Co = styled.dt`
+  margin: 50px 0 22px;
+  color: #919496;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: block;
+
+  @media (min-width: 992px) {
+    margin: 20px 0;
+  }
+`;
+
+const Links = styled.dd`
+  margin: 0;
+  display: block;
+  /* margin-inline-start: 40px; */
+
+  a {
+    padding: 3px 0 15px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-decoration: none;
+    color: #fff;
   }
 `;
