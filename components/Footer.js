@@ -1,117 +1,142 @@
 import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
+import { Instagram } from "@styled-icons/boxicons-logos";
+import { Twitter } from "@styled-icons/boxicons-logos/Twitter";
+import { Facebook } from "@styled-icons/boxicons-logos/Facebook";
 
 function Footer() {
   return (
-    <Container>
-      <Nav>
-        <Spotify>
-          <Logo>
-            <Link href="/">
-              <a>
-                <Image
-                  src="/images/Spotify-logo.svg"
-                  height={100}
-                  width={180}
-                  alt="logo"
-                />
-              </a>
-            </Link>
-          </Logo>
-        </Spotify>
-        <Columns>
-          <Col>
-            <Co>Company</Co>
-            <Links>
-              <Link href="/">
-                <a>About</a>
-              </Link>
-            </Links>
-            <Links>
-              <Link href="/">
-                <a>Jobs</a>
-              </Link>
-            </Links>
-            <Links>
-              <Link href="/">
-                <a>For the Record</a>
-              </Link>
-            </Links>
-          </Col>
-
-          {/* 2 */}
-          <Col>
-            <Co>Communities</Co>
-            <Links>
-              <Link href="/">
-                <a>For Artists</a>
-              </Link>
-            </Links>
-            <Links>
-              <Link href="/">
-                <a>Developers</a>
-              </Link>
-            </Links>
-            <Links>
-              <Link href="/">
-                <a>Advertising</a>
-              </Link>
-            </Links>
-            <Links>
-              <Link href="/">
-                <a>Investors</a>
-              </Link>
-            </Links>
-            <Links>
-              <Link href="/">
-                <a>Vendors</a>
-              </Link>
-            </Links>
-          </Col>
-
-          {/* 3 */}
-          <Col>
-            <Co>Useful links</Co>
-            <Links>
-              <Link href="/">
-                <a>Support</a>
-              </Link>
-            </Links>
-            <Links>
-              <Link href="/">
-                <a>Web Player</a>
-              </Link>
-            </Links>
-            <Links>
-              <Link href="/">
-                <a>Free Mobile App</a>
-              </Link>
-            </Links>
-          </Col>
-        </Columns>
-
-        {/* ! */}
-
-        <Social>
-          <Icons>
-            <Icon>
+    <Div>
+      <Container>
+        <Nav>
+          <Spotify>
+            <Logo>
               <Link href="/">
                 <a>
-                  <span></span>
+                  <Image
+                    src="/images/Spotify-logo.svg"
+                    height={100}
+                    width={180}
+                    alt="logo"
+                  />
                 </a>
               </Link>
-            </Icon>
-          </Icons>
-        </Social>
-      </Nav>
-    </Container>
+            </Logo>
+          </Spotify>
+          <Columns>
+            <Col>
+              <Co>Company</Co>
+              <Links>
+                <Link href="/">
+                  <a>About</a>
+                </Link>
+              </Links>
+              <Links>
+                <Link href="/">
+                  <a>Jobs</a>
+                </Link>
+              </Links>
+              <Links>
+                <Link href="/">
+                  <a>For the Record</a>
+                </Link>
+              </Links>
+            </Col>
+
+            {/* 2 */}
+            <Col>
+              <Co>Communities</Co>
+              <Links>
+                <Link href="/">
+                  <a>For Artists</a>
+                </Link>
+              </Links>
+              <Links>
+                <Link href="/">
+                  <a>Developers</a>
+                </Link>
+              </Links>
+              <Links>
+                <Link href="/">
+                  <a>Advertising</a>
+                </Link>
+              </Links>
+              <Links>
+                <Link href="/">
+                  <a>Investors</a>
+                </Link>
+              </Links>
+              <Links>
+                <Link href="/">
+                  <a>Vendors</a>
+                </Link>
+              </Links>
+            </Col>
+
+            {/* 3 */}
+            <Col>
+              <Co>Useful links</Co>
+              <Links>
+                <Link href="/">
+                  <a>Support</a>
+                </Link>
+              </Links>
+              <Links>
+                <Link href="/">
+                  <a>Web Player</a>
+                </Link>
+              </Links>
+              <Links>
+                <Link href="/">
+                  <a>Free Mobile App</a>
+                </Link>
+              </Links>
+            </Col>
+          </Columns>
+
+          {/* ! */}
+
+          <Social>
+            <Icons>
+              <Icon>
+                <Link href="/">
+                  <a>
+                    <InstagramI />
+                  </a>
+                </Link>
+              </Icon>
+              <Icon>
+                <Link href="/">
+                  <a>
+                    <TwitterT />
+                  </a>
+                </Link>
+              </Icon>
+              <Icon>
+                <Link href="/">
+                  <a>
+                    <FacebookF />
+                  </a>
+                </Link>
+              </Icon>
+            </Icons>
+          </Social>
+
+          <FooterLinks></FooterLinks>
+        </Nav>
+      </Container>
+    </Div>
   );
 }
 
 export default Footer;
 
-const Container = styled.div`
+const Div = styled.div`
+  display: block;
+`;
+
+const Container = styled.footer`
   background: #000;
   padding: 50px 0 20px;
   font-size: 16px;
@@ -300,8 +325,54 @@ const Icon = styled.li`
       width: 54px;
       height: 54px;
     }
+  }
+`;
 
-    span {
-    }
+const InstagramI = styled(Instagram)`
+  color: #fff;
+  padding: 1px;
+  display: block;
+  width: 36px;
+  height: 36px;
+
+  &:hover {
+    color: #1ed760;
+  }
+`;
+const TwitterT = styled(Twitter)`
+  color: #fff;
+  padding: 1px;
+  display: block;
+  width: 32px;
+  height: 32px;
+
+  &:hover {
+    color: #1ed760;
+  }
+`;
+const FacebookF = styled(Facebook)`
+  color: #fff;
+  padding: 1px;
+  display: block;
+  width: 32px;
+  height: 32px;
+
+  &:hover {
+    color: #1ed760;
+  }
+`;
+const FooterLinks = styled.div`
+  margin: 0 15px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+
+  @media (min-width: 992px) {
+    width: 100%;
+  }
+
+  &:hover {
+    color: #1ed760;
   }
 `;
