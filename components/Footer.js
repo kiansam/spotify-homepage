@@ -92,6 +92,18 @@ function Footer() {
         </Columns>
 
         {/* ! */}
+
+        <Social>
+          <Icons>
+            <Icon>
+              <Link href="/">
+                <a>
+                  <span></span>
+                </a>
+              </Link>
+            </Icon>
+          </Icons>
+        </Social>
       </Nav>
     </Container>
   );
@@ -238,5 +250,58 @@ const Links = styled.dd`
     line-height: 1.5;
     text-decoration: none;
     color: #fff;
+  }
+`;
+
+const Social = styled.div`
+  margin: 120px 15px 15px;
+  display: block;
+
+  @media (min-width: 992px) {
+    margin: 0 15px 0 auto;
+  }
+`;
+
+const Icons = styled.ul`
+  margin: 20px 0 0;
+  padding: 0;
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+`;
+
+const Icon = styled.li`
+  margin-right: 15px;
+  display: inline-block;
+  text-align: -webkit-match-parent;
+
+  a {
+    border-radius: 50%;
+    background-color: #222326;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 44px;
+    height: 44px;
+    color: #fff;
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+
+    @media (min-width: 992px) {
+      width: 54px;
+      height: 54px;
+    }
+
+    span {
+    }
   }
 `;
