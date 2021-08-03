@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Instagram } from "@styled-icons/boxicons-logos";
 import { Twitter } from "@styled-icons/boxicons-logos/Twitter";
 import { Facebook } from "@styled-icons/boxicons-logos/Facebook";
+import { World } from "@styled-icons/boxicons-regular/World";
 
 function Footer() {
   return (
@@ -123,7 +124,10 @@ function Footer() {
             </Icons>
           </Social>
 
-          <FooterLinks></FooterLinks>
+          <Country>
+            <World1 />
+            <Place>USA</Place>
+          </Country>
         </Nav>
       </Container>
     </Div>
@@ -147,10 +151,6 @@ const Container = styled.footer`
 
   @media (min-width: 992px) {
     padding: 80px 0 50px;
-  }
-
-  &:hover {
-    color: #1ed760;
   }
 `;
 
@@ -275,6 +275,10 @@ const Links = styled.dd`
     line-height: 1.5;
     text-decoration: none;
     color: #fff;
+
+    &:hover {
+      color: #1ed760;
+    }
   }
 `;
 
@@ -361,7 +365,7 @@ const FacebookF = styled(Facebook)`
     color: #1ed760;
   }
 `;
-const FooterLinks = styled.div`
+const Country = styled.div`
   margin: 0 15px;
   display: -webkit-flex;
   display: flex;
@@ -371,8 +375,33 @@ const FooterLinks = styled.div`
   @media (min-width: 992px) {
     width: 100%;
   }
+`;
 
+const Place = styled.a`
+  padding: 0;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  -webkit-align-items: center;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 10px;
+  text-decoration: none;
+  color: #919496;
+  cursor: pointer;
   &:hover {
     color: #1ed760;
   }
+
+  @media (min-width: 768px) {
+    font-size: 12px;
+  }
+`;
+const World1 = styled.div`
+  color: #919496;
+  cursor: pointer;
+  width: 12;
+  height: 13;
+  margin: 0 8px 0 0;
 `;
