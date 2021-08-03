@@ -74,7 +74,7 @@ const Wrapper = styled.div`
   height: 80px;
   z-index: 1;
   width: 100%;
-  padding: 0 24px;
+  padding: 0 1px;
 
   @media (min-width: 1200px) {
     padding: 100px;

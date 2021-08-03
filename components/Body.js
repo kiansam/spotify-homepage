@@ -7,10 +7,7 @@ function Body() {
       <Wrapper>
         <Wrap>
           <Div>
-            <H1>
-              Listening is <br />
-              everything
-            </H1>
+            <H1>Listening is everything</H1>
           </Div>
           <P>Millions of songs and podcasts. No credit card needed.</P>
           <Link href="/">
@@ -93,7 +90,7 @@ const Wrap = styled.div`
   max-width: 650px;
   width: 100%;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: space-between; */
   text-align: center;
   align-items: center;
 `;
@@ -102,11 +99,12 @@ const Div = styled.div`
   display: block;
   text-align: center;
   z-index: 99;
+  margin-top: 120px;
 `;
 
 const H1 = styled.h1`
   font-size: 6rem;
-  font-weight: 800;
+  font-weight: 900;
   line-height: 8rem;
   margin-bottom: 30px;
   letter-spacing: -0.04em !important;
@@ -125,38 +123,44 @@ const H1 = styled.h1`
   margin-top: 0px;
   margin-bottom: 0px;
   font-weight: 900;
+  font-weight: 900;
+  letter-spacing: 100px;
 
-  /* @media (min-width: 1200px) {
+  @media (min-width: 1200px) {
     font-size: 7.5rem;
-  } */
+    font-weight: 900;
+  }
 
   @media (min-width: 1200px) {
     width: 800px;
     text-indent: -3.3em;
     transform: translate(125px, 0px);
+    font-weight: 900;
   }
 
-  @media (min-width: 1200px) {
-    font-size: 156px;
+  @media (max-width: 1200px) {
+    font-size: 7rem;
     line-height: 166px;
     padding-bottom: 40px;
+    font-weight: 900;
   }
   @media (max-width: 768px) {
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: 800;
     line-height: 6rem;
+    font-weight: 900;
   }
   @media (max-width: 630px) {
-    color: #fff;
+    font-size: 5.15rem;
   }
 `;
 
 const P = styled.p`
-  font-size: 1.1rem;
-  line-height: 1.2rem;
+  font-size: 1.3rem;
+  line-height: 1rem;
   font-weight: 500;
   max-width: 450px;
-  margin-top: 10px;
+  margin-top: 5px;
 
   box-sizing: border-box;
   font-family: spotify-circular, Helvetica, Arial, sans-serif;
@@ -193,7 +197,7 @@ const Button = styled.button`
   cursor: pointer;
   align-items: center;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 10px;
   width: 200px;
   height: 50px;
   border: none;

@@ -128,6 +128,41 @@ function Footer() {
             <World1 />
             <Place>USA</Place>
           </Country>
+          <BLinks>
+            <Bul>
+              <Bli>
+                <Link href="/">
+                  <a>Legal</a>
+                </Link>
+              </Bli>
+              <Bli>
+                <Link href="/">
+                  <a>Privacy Center</a>
+                </Link>
+              </Bli>
+              <Bli>
+                <Link href="/">
+                  <a>Privacy Policy</a>
+                </Link>
+              </Bli>
+              <Bli>
+                <Link href="/">
+                  <a>Cookies</a>
+                </Link>
+              </Bli>
+              <Bli>
+                <Link href="/">
+                  <a>About Ads</a>
+                </Link>
+              </Bli>
+              <Bli>
+                <Link href="/">
+                  <a>Additional CA Privacy Disclosures</a>
+                </Link>
+              </Bli>
+            </Bul>
+            <Span>© 2021 Spotify AB</Span>
+          </BLinks>
         </Nav>
       </Container>
     </Div>
@@ -398,10 +433,88 @@ const Place = styled.a`
     font-size: 12px;
   }
 `;
+
 const World1 = styled.div`
   color: #919496;
   cursor: pointer;
   width: 12;
   height: 13;
   margin: 0 8px 0 0;
+`;
+
+const BLinks = styled.div`
+  display: -webkit-flex;
+  display: flex;
+  font-size: 16px;
+  font-family: Circular, spotify-circular, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  @media (min-width: 992px) {
+    width: 100%;
+  }
+`;
+
+const Bul = styled.ul`
+  margin: 0 45px 0 0;
+  padding: 0 0 0 15px;
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+`;
+
+const Bli = styled.li`
+  display: list-item;
+  text-align: -webkit-match-parent;
+  margin-right: 24px;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+  line-height: normal;
+  letter-spacing: 0;
+
+  a {
+    text-align: -webkit-match-parent;
+    list-style: none;
+    display: inline-block;
+    line-height: normal;
+    letter-spacing: 0;
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    -webkit-align-items: center;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 10px;
+    text-decoration: none;
+    padding: 1em 0;
+    color: #919496;
+
+    &:hover {
+      color: #1ed760;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 12px;
+    }
+  }
+`;
+
+const Span = styled.span`
+  margin: 0 15px 0 auto;
+  padding: 1em 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  font-size: 10px;
+  color: #919496;
+
+  @media (min-width: 768px) {
+    font-size: 12px;
+  }
 `;

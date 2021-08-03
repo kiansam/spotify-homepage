@@ -71,7 +71,7 @@ const Container = styled.aside`
   display: block;
   top: 0;
   right: 0;
-  transition: 0.2s ease-in-out;
+  transition: 0.3s ease-in-out;
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
   left: ${({ isOpen }) => (isOpen ? "40%" : "100%")};
 
@@ -90,7 +90,7 @@ const Wrapper = styled.div`
 const Icon = styled.div`
   position: absolute;
   top: 0.5rem;
-  right: 3rem;
+  right: 2rem;
   background: transparent;
   font-size: 2rem;
   cursor: default;
