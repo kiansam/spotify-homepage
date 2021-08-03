@@ -99,14 +99,19 @@ const Div = styled.div`
   display: block;
   text-align: center;
   z-index: 99;
-  margin-top: 120px;
+  margin-top: 150px;
+
+  @media (max-width: 1200px) {
+    margin-top: 60px;
+  }
 `;
 
 const H1 = styled.h1`
-  font-size: 6rem;
   font-weight: 900;
   line-height: 8rem;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+  width: 312px;
+  padding-bottom: 16px;
   letter-spacing: -0.04em !important;
   font-family: spotify-circular, Helvetica, Arial, sans-serif;
 
@@ -123,35 +128,32 @@ const H1 = styled.h1`
   margin-top: 0px;
   margin-bottom: 0px;
   font-weight: 900;
-  font-weight: 900;
-  letter-spacing: 100px;
+  /* letter-spacing: 10px; */
+  font-size: 9rem;
+  width: 100%;
 
   @media (min-width: 1200px) {
-    font-size: 7.5rem;
-    font-weight: 900;
-  }
-
-  @media (min-width: 1200px) {
+    font-size: 9rem;
+    line-height: 9rem;
     width: 800px;
     text-indent: -3.3em;
     transform: translate(125px, 0px);
-    font-weight: 900;
   }
 
   @media (max-width: 1200px) {
-    font-size: 7rem;
-    line-height: 166px;
-    padding-bottom: 40px;
-    font-weight: 900;
+    font-size: 6.8rem;
+    line-height: 7rem;
+    /* padding-bottom: 20px; */
   }
   @media (max-width: 768px) {
     font-size: 6rem;
     font-weight: 800;
     line-height: 6rem;
-    font-weight: 900;
   }
   @media (max-width: 630px) {
-    font-size: 5.15rem;
+    font-size: 5.17rem;
+    line-height: 5.3rem;
+    margin-bottom: 15px;
   }
 `;
 
@@ -175,6 +177,7 @@ const P = styled.p`
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  margin-top: -48px;
 
   @media (min-width: 480px) {
     font-size: 18px;
@@ -186,10 +189,14 @@ const P = styled.p`
     width: 800px;
   }
 
+  @media (max-width: 1200px) {
+    max-width: 400px;
+  }
+
   @media (min-width: 480px) {
     font-size: 18px;
     line-height: 24px;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
   }
 `;
 
@@ -198,13 +205,11 @@ const Button = styled.button`
   align-items: center;
   text-align: center;
   margin-top: 10px;
-  width: 200px;
-  height: 50px;
   border: none;
   border-radius: 60px;
   background-color: #1bd760;
   color: #2a40ab;
-  transition: all 0.05s ease-in-out;
+  transition: all 0.03s ease-in-out;
   touch-action: manipulation;
   transition-duration: 33ms;
   transition-property: background-color, border-color, color, box-shadow, filter,
@@ -214,6 +219,9 @@ const Button = styled.button`
   transform: translate3d(0px, 0px, 0px);
   padding: 0px;
   align-self: center;
+  border-radius: 500px;
+  font-size: inherit;
+  padding: 1px 28px;
 
   &:hover {
     background-color: #2ce26d;

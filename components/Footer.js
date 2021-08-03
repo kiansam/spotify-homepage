@@ -190,7 +190,9 @@ const Container = styled.footer`
 `;
 
 const Nav = styled.nav`
+  width: 100%;
   margin: 0 auto;
+  display: block;
 
   @media (min-width: 768px) {
     width: 750px;
